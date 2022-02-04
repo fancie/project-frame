@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        file-extension: yml
+        group: DEFAULT_GROUP
+        prefix:
+        shared-configs: jpa-config.yml,mysql-data-config.yml
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+
+  application:
+    name: server2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8890
+
+seata:
+  tx-service-group: my_tx_group

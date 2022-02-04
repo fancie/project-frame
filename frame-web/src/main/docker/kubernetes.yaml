@@ -1,0 +1,35 @@
+apiVersion: v1
+
+kind: ReplicationController #对象类型，这里是rc（全称ReplicationController）
+
+metadata:
+  name: mysql #名称
+  labels:
+    name: mysql #标注
+
+spec:
+  replicas: 2 #运行容器的副本数，修改这里可以快速修改分布式节点数量
+  selector:
+    name: mysql
+  template:
+    metadata:
+      labels:
+        name: mysql
+    spec:
+      containers: #docker容器的配置
+      - name: mysql #中横杠应该是表示多个的意思
+        image: mysql
+        imagePullPolicy: IfNotPresent #pull镜像时机
+        ports:
+          - containerPort: 3306 #容器对方开放端口
+        env:
+          - name: MYSQL_DATABASE
+            value: test
+          - name: MYSQL_ROOT_PASSWORD
+            value: root
+          - name: MYSQL_ROOT_HOST
+            value: '%'
+#        env:
+#          MYSQL_DATABASE: test
+#          MYSQL_ROOT_PASSWORD: root
+#          MYSQL_ROOT_HOST: '%'

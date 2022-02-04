@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+  application:
+    name: admin
+#  security:  已经不起作用，DataSecurityConfig重写了登录逻辑
+#    user:
+#      name: "admin"
+#      password: "admin"
+
+server:
+  port: 8877
+  ssl:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+

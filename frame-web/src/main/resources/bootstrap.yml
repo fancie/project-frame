@@ -1,0 +1,34 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+
+  application:
+    name: web
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 6000000  # 相当于Request.Options
+        readTimeout: 6000000     # 相当于Request.Options
+
+server:
+  port: 8888
+
+seata:
+  tx-service-group: my_tx_group

@@ -1,0 +1,76 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+    gateway:
+      discovery:
+        locator:
+          enabled: true                       #是否开启基于服务发现得路由规则
+          lower-case-service-id: false
+      routes:
+        - id: web
+          uri: lb://Testweb
+          predicates:
+            - Path=/web/**
+          filters:
+            - StripPrefix=1
+        - id: server1
+          uri: lb://server1
+          predicates:
+            - Path=/server1/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8008
+      eager: true
+      datasource:
+        flow:
+          nacos:
+            server-addr: localhost:8848
+            dataId: gateway-flow-rules
+            groupId: mytest
+            namespace:
+            data-type: json
+            rule-type: flow
+        degrade:
+          nacos:
+            server-addr: localhost:8848
+            dataId: gateway-degrade-rules
+            groupId: mytest
+            namespace:
+            data-type: json
+            rule-type: degrade
+
+  application:
+    name: gateway
+
+
+management:
+  health:
+    defaults:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+feign:
+  sentinel:
+    enabled: true
+
+server:
+  port: 8899
+  ssl:
+    enabled: false
