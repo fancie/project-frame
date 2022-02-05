@@ -7,6 +7,8 @@
   
    版本号：NACOS1.4.3
    
+   启动命令：sh startup.sh -m standalone
+   
    配置项内容(需要根据自己的需要做相应修改，所有配置都不是必须的，可以写到项目配置文件里面，本人只是为了做测试，部分内容从nacos读取，部分内容写入项目配置文件)
    ```
    1.1.1 jpa-config.yml（JPA配置，Group：DEFAULT_GROUP，格式：yaml）
@@ -57,6 +59,29 @@
    ]
    ```
   1.2 Seata-server
+  
+  版本号：1.3.0
+  
+  启动命令：sh ./bin/seata-server.sh -p 8091 -m file
+  
+  1.3 Sentinal-dashboard（非必需）
+  
+  版本号：在github下载的最新版
+  
+  编译命令：mvn clean package -DskipTests #编译时需要跳过test
+  
+  启动命令：java -Dserver.port=8008 -Dcsp.sentinel.dashboard.server=localhost:8008 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
 
-其它文档还有待补充
+2.项目介绍
+------------
+ 2.1 子项目描述
+ 
+ ```
+  frame-admin: spring-boot-admin监控监控项目
+  frame-gateway：网关，所有项目访问都需要经过网关
+  frame-core: 引入的基础类、openfeign客户端调用、全局事物相关
+  frame-server1: 模拟users表的访问，只能web访问
+  frame-server2: 模拟orders表的访问，只能web访问
+  frame-web：对外提供web服务，可以前后端分离，也可以不分
+ ```
 
