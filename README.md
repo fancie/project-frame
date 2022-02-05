@@ -84,4 +84,25 @@
   frame-server2: 模拟orders表的访问，只能web访问
   frame-web：对外提供web服务，可以前后端分离，也可以不分
  ```
-
+ 2.2 项目启动
+ ```
+  项目启动无先后顺序
+  启动所有项目：frame-admin、frame-gateway、frame-server1、frame-server2、frame-web
+ ```
+ 2.3 项目调用关系
+ ```
+  frame-gateway----->frame-web---(frame-gateway)-->frame-server1/frame-server2
+ ```
+ 2.4 测试效果
+ ```
+  2.4.1 访问：http://localhost:8899/web/r/
+  返回：相应的frame-web项目的 /r/ 地址下的内容
+  
+  2.4.1 访问：http://localhost:8899/web/
+  返回：相应的frame-web项目的 / 地址下的内容
+  这个地址可以测试seata的分布式事务，分别调用frame-server1和frame-server2服务向数据库新增一个用户和一个订单（数据纯测试，可以忽略）
+ 
+  返回：相应的frame-web项目的 / 地址下的内容地址
+  返回：相应的frame-web项目的 / 地址下的内容
+ ```
+  
