@@ -10,7 +10,6 @@
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
-          <root url="file://$MODULE_DIR$/target/generated-sources/annotations" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -22,7 +21,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -149,7 +147,7 @@
     <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.3.8" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:8.0.19" level="project" />
-    <orderEntry type="module" module-name="frame-core" />
+    <orderEntry type="module" module-name="core" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-openfeign:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-openfeign-core:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign.form:feign-form-spring:3.8.0" level="project" />
