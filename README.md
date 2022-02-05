@@ -98,8 +98,8 @@
   2.4.1 访问：http://localhost:8899/web/r/
   返回：相应的frame-web项目的 /r/ 地址下的内容
   
-  2.4.1 访问：http://localhost:8899/web/
-  返回：相应的frame-web项目的 / 地址下的内容
+  2.4.1 访问：http://localhost:8899/web/tx/
+  返回：相应的frame-web项目的 /tx/ 地址下的内容
   这个地址可以测试seata的分布式事务，分别调用frame-server1和frame-server2服务向数据库新增一个用户和一个订单（数据纯测试，可以忽略）
  ```
   
