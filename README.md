@@ -61,17 +61,17 @@
   1.2 Seata-server
   
   版本号：1.3.0
-  
+  ```
   启动命令：sh ./bin/seata-server.sh -p 8091 -m file
-  
+  ```
   1.3 Sentinal-dashboard（非必需）
-  
+  ```
   版本号：在github下载的最新版
   
   编译命令：mvn clean package -DskipTests #编译时需要跳过test
   
   启动命令：java -Dserver.port=8008 -Dcsp.sentinel.dashboard.server=localhost:8008 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
-
+  ```
 2.项目介绍
 ------------
  2.1 子项目描述
