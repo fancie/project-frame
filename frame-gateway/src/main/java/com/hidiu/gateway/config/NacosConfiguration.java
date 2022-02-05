@@ -16,6 +16,13 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * @title: 测试nacos配置读取
+ * @projectName frame-gateway
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 @Slf4j
 @Configuration
 public class NacosConfiguration {

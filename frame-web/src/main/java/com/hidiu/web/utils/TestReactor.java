@@ -11,7 +11,11 @@ import java.util.function.BiConsumer;
 import java.util.stream.Stream;
 
 /**
- * 这里面纯粹本人测试，可删除
+ * @title: 这里面纯粹本人测试，可删除
+ * @projectName frame-web
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
  */
 public class TestReactor {
 

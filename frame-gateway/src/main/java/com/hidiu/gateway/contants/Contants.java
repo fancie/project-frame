@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @title: 常量
+ * @projectName frame-gateway
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 public class Contants {
 
     public static String openFeignAuthToken = "";

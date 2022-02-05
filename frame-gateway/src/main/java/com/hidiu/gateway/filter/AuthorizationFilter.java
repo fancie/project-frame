@@ -11,6 +11,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+/**
+ * @title: feign客户端权限过滤
+ * @projectName frame-gateway
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 @Component
 public class AuthorizationFilter implements GlobalFilter, Ordered {
 

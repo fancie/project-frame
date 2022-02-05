@@ -8,6 +8,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+/**
+ * @title: 请求拦截，例如拦截ip，useragent等
+ * @projectName frame-gateway
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 @Slf4j
 public class RequestGatewayFilter implements GatewayFilter, Ordered {
 

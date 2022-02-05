@@ -10,6 +10,13 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * @title: springbootadmin安全过滤
+ * @projectName frame-admin
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 @Slf4j
 @Configuration
 public class DataSecurityConfig extends WebSecurityConfigurerAdapter {

@@ -7,6 +7,13 @@ import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * @title: seata事务
+ * @projectName frame-core
+ * @description: TODO
+ * @author fancie/1084961@qq.com
+ * @date 2022-02-05 12:01:01
+ */
 @Component
 public class TransactionServiceImpl implements TransactionService {
 
