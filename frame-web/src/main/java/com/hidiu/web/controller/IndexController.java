@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
 @Controller
 public class IndexController {
 
@@ -15,18 +14,18 @@ public class IndexController {
     private TransactionService transactionService;
 
     @ResponseBody
-    @RequestMapping("/")
-    public String index(){
+    @RequestMapping("/tx")
+    public String tx(){
         transactionService.testTranaction();
-        String random = StringUtils.randomStr(51);
-        return  "index1" + random;
+        String random = StringUtils.randomStr(64);
+        return  "tx---------" + random;
     }
 
     @ResponseBody
     @RequestMapping("/r")
     public String r(){
-        String random = StringUtils.randomStr(51);
-        return  "index2----------" + random;
+        String random = StringUtils.randomStr(64);
+        return  "r----------" + random;
     }
 
 }
