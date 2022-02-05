@@ -12,7 +12,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true                       #是否开启基于服务发现得路由规则
+          enabled: true                       #是否开启基于服务发现的路由规则
           lower-case-service-id: false
       routes:
         - id: web
