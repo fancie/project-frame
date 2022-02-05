@@ -105,6 +105,16 @@
 3.其它项目资料
 ------------
  3.1 [Nacos配置和注册](https://github.com/fancie/project-frame/wiki/1.-Nacos配置&注册)
+ 
+ 3.2 [路由规则](https://github.com/fancie/project-frame/wiki/2.-路由规则)
+
+ 3.3 [限流和熔断](https://github.com/fancie/project-frame/wiki/3.-限流&熔断)
+
+ 3.4 [安全和拦截](https://github.com/fancie/project-frame/wiki/4.-安全&拦截)
+ 
+ 3.5 [分布式事务](https://github.com/fancie/project-frame/wiki/5.-分布式事务)
+ 
+ 3.6 [监控安全认证](https://github.com/fancie/project-frame/wiki/6.-监控安全认证)
 
 
 --------------
