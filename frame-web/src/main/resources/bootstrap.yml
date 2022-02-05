@@ -26,6 +26,8 @@ feign:
       default:
         connectTimeout: 6000000  # 相当于Request.Options
         readTimeout: 6000000     # 相当于Request.Options
+        defaultRequestHeaders:
+          authToken: EbDcwcLG3zfGdiHFFzSQbbf4Y1epwOK14wRGvqt8BmYbW0FpWKY
 
 server:
   port: 8888
