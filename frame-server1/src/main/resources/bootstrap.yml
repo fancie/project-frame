@@ -29,5 +29,10 @@ management:
 server:
   port: 8889
 
+log:
+  path: /Users/mac/Documents/Logs #Log本地目录
+  stash:
+    path: localhost:5044  #Logstash的地址
+
 seata:
   tx-service-group: my_tx_group

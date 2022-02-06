@@ -30,3 +30,7 @@ management:
     health:
       show-details: always
 
+log:
+  path: /Users/mac/Documents/Logs #Log本地目录
+  stash:
+    path: localhost:5044  #Logstash的地址
