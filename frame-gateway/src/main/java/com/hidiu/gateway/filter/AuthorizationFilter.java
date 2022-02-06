@@ -21,13 +21,24 @@ import reactor.core.publisher.Mono;
 @Component
 public class AuthorizationFilter implements GlobalFilter, Ordered {
 
+    /**
+     * 这个过滤器是验证客户端是有权限访问相应的feign接口，不需要的可以去掉
+     * @param exchange
+     * @param chain
+     * @return
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getPath().toString();
         var authToken = request.getHeaders().get("authToken");
+
         if(Contants.isInOpenFeignServices(path)){
-            if(authToken != null && authToken.size() > 0 && Contants.openFeignAuthToken.equals(authToken.get(0))){
+            var applicationNameHeader = request.getHeaders().get("ApplicationName");
+            boolean tokenIsRight = authToken != null && authToken.size() > 0 && Contants.openFeignAuthToken.equals(authToken.get(0));
+            String applicationName = applicationNameHeader != null && applicationNameHeader.size() > 0 ? applicationNameHeader.get(0) : "";
+            boolean appHasRight = Contants.havaRight(applicationName, path);
+            if(tokenIsRight && appHasRight){
                 //放行
                 return chain.filter(exchange);
             }

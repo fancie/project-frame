@@ -17,6 +17,9 @@ public class Contants {
 
     public static List<String> openFeignServices = Arrays.asList("/server1/", "/server2/");
 
+    //案例表示web可以访问任何资源，server1可以访问server2，但是server2访问server1不在列
+    public static List<String> feignAppRight = Arrays.asList("web-*", "server1-server2");
+
     /**
      * 验证是不是openFeign调用
      * @param path
@@ -26,6 +29,20 @@ public class Contants {
         for(String service : openFeignServices){
             if(path.startsWith(service)){
                 return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean havaRight(String applicationName, String path){
+        String[] strs = path.split("/");
+        if(strs.length > 0){
+            String r1 = applicationName + "-*";
+            String r2 = applicationName + "-" + strs[0];
+            for(String right : feignAppRight){
+                if(right.equals(r1) || right.equals(r2)){
+                    return true;
+                }
             }
         }
         return false;
