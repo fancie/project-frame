@@ -1,7 +1,7 @@
 # 项目文档
  开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件 
 
-1.项目启动条件
+1.项目启动条件(版本可以自行选择，只需跟依赖匹配)
 ------------
   1.1 Nacos
   
