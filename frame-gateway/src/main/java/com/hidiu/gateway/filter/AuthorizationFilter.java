@@ -22,7 +22,7 @@ import reactor.core.publisher.Mono;
 public class AuthorizationFilter implements GlobalFilter, Ordered {
 
     /**
-     * 这个过滤器是验证客户端是有权限访问相应的feign接口，不需要的可以去掉
+     * 这个过滤器是验证客户端是有权限访问相应的feign接口，不需要的可以去掉此过滤器
      * @param exchange
      * @param chain
      * @return
