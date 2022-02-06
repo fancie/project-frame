@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+
+  application:
+    name: es
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8878
+
+
