@@ -27,6 +27,12 @@ spring:
             - Path=/server1/**
           filters:
             - StripPrefix=1
+        - id: es
+          uri: lb://es
+          predicates:
+            - Path=/es/**
+          filters:
+            - StripPrefix=1
     sentinel:
       transport:
         port: 8719

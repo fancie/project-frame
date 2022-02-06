@@ -5,7 +5,7 @@ import com.hidiu.es.entity.News;
 /**
  * @author fancie
  * @title: NewsService
- * @projectName project-frame
+ * @projectName project-es
  * @description: TODO
  * @date 2022/2/6 下午8:49
  */

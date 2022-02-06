@@ -14,7 +14,7 @@ import java.util.UUID;
 /**
  * @author fancie
  * @title: EsControllor
- * @projectName project-frame
+ * @projectName project-es
  * @description: TODO
  * @date 2022/2/6 下午8:45
  */
@@ -37,11 +37,11 @@ public class EsControllor {
         return "OK";
     }
 
-    @RequestMapping("/news/get/{id}")
+    @RequestMapping("/news/get")
     @ResponseBody
-    public String get(@PathVariable("id") String id){
+    public News get(String id){
         News news = newsService.findById(id);
         log.info("Title = " + news.getTitle());
-        return "OK";
+        return news;
     }
 }

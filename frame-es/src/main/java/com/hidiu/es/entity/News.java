@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * @author fancie
  * @title: News
- * @projectName project-frame
+ * @projectName project-es
  * @description: TODO
  * @date 2022/2/6 下午8:47
  */

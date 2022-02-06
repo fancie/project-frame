@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author fancie
  * @title: NewsServiceImpl
- * @projectName project-frame
+ * @projectName project-es
  * @description: TODO
  * @date 2022/2/6 下午8:53
  */
