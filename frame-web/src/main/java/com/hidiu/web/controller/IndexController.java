@@ -4,7 +4,6 @@ import com.hidiu.feign.es.EsFeignService;
 import com.hidiu.service.TransactionService;
 import com.hidiu.utils.StringUtils;
 import com.hidiu.vo.NewsVo;
-import org.bouncycastle.est.ESTService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
