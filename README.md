@@ -1,5 +1,5 @@
 # 项目文档
- 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata等组件 
+ 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件 
 
 1.项目启动条件
 ------------
@@ -64,7 +64,15 @@
   ```
   启动命令：sh ./bin/seata-server.sh -p 8091 -m file
   ```
-  1.3 Sentinal-dashboard（非必需）
+  
+  1.3 EKL
+  ```
+  elasticsearch版本：7.17
+  kibana版本：7.17
+  logstash版本：7.17
+  ```
+ 
+  1.4 Sentinal-dashboard（非必需）
   ```
   版本号：在github下载的最新版
   
@@ -120,4 +128,4 @@
 --------------
 其它有问题的可以联系我：1084961@qq.com
 
-2022-02-05 杭州
+2022-02-07 杭州
