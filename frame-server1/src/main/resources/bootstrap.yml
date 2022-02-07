@@ -17,6 +17,12 @@ spring:
   application:
     name: server1
 
+  jpa:
+    properties:
+      hibernate:
+        session_factory:
+          statement_inspector: com.hidiu.server1.interceptor.JpaInterceptor
+
 management:
   endpoints:
     web:

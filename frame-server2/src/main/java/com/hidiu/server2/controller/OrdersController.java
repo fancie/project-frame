@@ -25,8 +25,8 @@ public class OrdersController {
 
     @ResponseBody
     @RequestMapping("/")
-    public String index(){
-        String random = StringUtils.randomStr(51);
-        return  "index1" + random;
+    public String random(){
+        String random = StringUtils.randomStr(64);
+        return  "random------" + random;
     }
 }

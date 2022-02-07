@@ -2,6 +2,7 @@ package com.hidiu.server1.repository;
 
 import com.hidiu.server1.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,5 +13,6 @@ import org.springframework.stereotype.Component;
  */
 public interface UsersRepository extends JpaRepository<Users, Integer> {
 
-
+    @Query(value = "select t.* from users t where t.id = (?1)", nativeQuery = true)
+    Users findByIdFromSql(Integer id);
 }

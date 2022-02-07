@@ -25,10 +25,11 @@ public class UsersController {
     }
 
     @ResponseBody
-    @RequestMapping("/")
-    public String index(){
-        String random = StringUtils.randomStr(51);
-        return  "index1" + random;
+    @RequestMapping("/get")
+    public String get(Integer id){
+        String random = StringUtils.randomStr(64);
+        Users user = usersService.findById(id);
+        return  "get----" + random;
     }
 
 }
