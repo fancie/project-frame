@@ -22,10 +22,15 @@
         hibernate.jdbc.time_zone: Asia/Shanghai
    
    1.1.2 mysql-data-config.yml（mysql数据库配置，Group：DEFAULT_GROUP，格式：yaml）
-   spring:
-    datasource:
+   datasource:
+    master:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/test
+      username: root
+      password:
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test_slave
       username: root
       password:
       
