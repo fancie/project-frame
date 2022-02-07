@@ -1,7 +1,7 @@
 package com.hidiu.server2.config;
 
 import com.hidiu.server2.annotation.TargetDataSource;
-import com.hidiu.utils.DataSourceNames;
+import com.hidiu.ems.DataSourceNames;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

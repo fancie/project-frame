@@ -1,15 +1,12 @@
 package com.hidiu.server1.config;
 
 import com.hidiu.server1.annotation.TargetDataSource;
-import com.hidiu.utils.DataSourceNames;
+import com.hidiu.ems.DataSourceNames;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Method;
 
 /**
  * @author fancie

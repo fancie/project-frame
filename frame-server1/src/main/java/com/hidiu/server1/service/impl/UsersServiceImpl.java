@@ -4,7 +4,7 @@ import com.hidiu.server1.annotation.TargetDataSource;
 import com.hidiu.server1.entity.Users;
 import com.hidiu.server1.repository.UsersRepository;
 import com.hidiu.server1.service.UsersService;
-import com.hidiu.utils.DataSourceNames;
+import com.hidiu.ems.DataSourceNames;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
