@@ -1,5 +1,5 @@
 # 项目文档
- 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件 
+ 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件，支持数据库读写分离。
 
 1.项目启动条件(版本可自行选择，需与依赖匹配)
 ------------
@@ -22,10 +22,15 @@
         hibernate.jdbc.time_zone: Asia/Shanghai
    
    1.1.2 mysql-data-config.yml（mysql数据库配置，Group：DEFAULT_GROUP，格式：yaml）
-   spring:
-    datasource:
+   datasource:
+    master:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/test
+      username: root
+      password:
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test_slave
       username: root
       password:
       
