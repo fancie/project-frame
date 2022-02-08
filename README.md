@@ -1,5 +1,5 @@
 # 项目文档
- 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件、支持数据库读写分离、增加Redis集群缓存。
+ 开箱即用的spring-cloud集成方案，包括nacos、sentinal、openfeign、gateway、spring-boot-admin、security、seata、elasticsearch、ELK日志等组件、支持数据库读写分离、Redis集群缓存。
 
 1.项目启动条件(版本可自行选择，需与依赖匹配)
 ------------
