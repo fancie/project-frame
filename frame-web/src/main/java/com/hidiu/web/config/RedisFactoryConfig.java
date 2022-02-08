@@ -32,7 +32,7 @@ public class RedisFactoryConfig {
 
     @Bean
     public RedisConnectionFactory myLettuceConnectionFactory() {
-        Map<String, Object> source = new HashMap<String, Object>();
+        Map<String, Object> source = new HashMap();
         source.put("spring.redis.cluster.nodes", nodes);
         source.put("spring.redis.cluster.timeout", timeout);
         source.put("spring.redis.cluster.max-redirects", maxRedirects);
