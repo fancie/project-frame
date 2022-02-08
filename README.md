@@ -76,8 +76,17 @@
   kibana版本：7.17
   logstash版本：7.17
   ```
+  
+  1.4 Redis集群
+  ```
+   redis:
+     cluster:
+       nodes: localhost:6377,localhost:6388,localhost:6477,localhost:6488,localhost:6577,localhost:6588
+       timeout: 3000
+       max-redirects: 3
+  ```
  
-  1.4 Sentinal-dashboard（非必需）
+  1.5 Sentinal-dashboard（非必需）
   ```
   版本号：在github下载的最新版
   
