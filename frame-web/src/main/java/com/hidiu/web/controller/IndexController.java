@@ -4,8 +4,10 @@ import com.hidiu.feign.es.EsFeignService;
 import com.hidiu.service.TransactionService;
 import com.hidiu.utils.StringUtils;
 import com.hidiu.vo.NewsVo;
+import com.hidiu.web.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,9 @@ public class IndexController {
 
     @Autowired
     private EsFeignService esFeignService;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     @ResponseBody
     @RequestMapping("/tx")
@@ -51,6 +56,18 @@ public class IndexController {
         log.info("#--正在访问web项目的/news/id方法--#");
         NewsVo newsVo = esFeignService.findById(id);
         return  "get----------" + newsVo.getTitle();
+    }
+
+    @ResponseBody
+    @RequestMapping("/redis/{key}/{value}")
+    public String redis(@PathVariable("key") String key, @PathVariable("value") String value){
+        log.info("#--正在访问web项目的/redis测试方法--#");
+        redisUtil.set(key, value, 360);
+        String valueNew = "";
+        if(redisUtil.hasKey(key)){
+            valueNew = (String) redisUtil.get(key);
+        }
+        return  "redis----------key：" + key + "----------value：" + valueNew;
     }
 
 }

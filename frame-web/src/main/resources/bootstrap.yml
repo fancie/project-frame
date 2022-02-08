@@ -8,6 +8,12 @@ spring:
         username: nacos
         password: nacos
 
+  redis:
+    cluster:
+      nodes: localhost:6377,localhost:6388,localhost:6477,localhost:6488,localhost:6577,localhost:6588
+      timeout: 3000
+      max-redirects: 3
+
   application:
     name: web
 
