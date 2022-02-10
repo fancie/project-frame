@@ -984,13 +984,13 @@ public class RedisUtil {
         try {
             Double score = redisTemplate.opsForZSet().score(key, item);
             if (score == null) {
-                return new Double(0);
+                return Double.valueOf(0);
             } else {
                 return score;
             }
         } catch (Exception e) {
             log.error("execute fail", e);
-            return new Double(0);
+            return Double.valueOf(0);
         }
     }
 
