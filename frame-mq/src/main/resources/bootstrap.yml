@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+
+  application:
+    name: mq
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8855
+
+log:
+  path: /Users/mac/Documents/Logs #Log本地目录
+  stash:
+    path: localhost:5044  #Logstash的地址
+
