@@ -38,7 +38,7 @@ public class RocketMQConfigure {
     @Autowired
     private MQListenerProcessor mqListenerProcessor;
     /**
-     * mq 消费者配置
+     * mq 消费者配置, 可以创建多个Consumer，消费不同类型的消息
      * @return
      * @throws MQClientException
      */
