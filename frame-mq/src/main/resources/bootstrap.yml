@@ -13,6 +13,16 @@ spring:
   application:
     name: mq
 
+rocketmq:
+  consumer:
+    isOnOff: on
+    groupName: frame
+    namesrvAddr: 127.0.0.1:9876
+    topics: TestTopic~TestTag
+    consumeThreadMin: 5
+    consumeThreadMax: 32
+    consumeMessageBatchMaxSize: 1
+
 management:
   endpoints:
     web:
