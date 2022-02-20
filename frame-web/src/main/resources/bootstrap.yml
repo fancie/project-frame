@@ -35,6 +35,15 @@ feign:
         defaultRequestHeaders:
           authToken: EbDcwcLG3zfGdiHFFzSQbbf4Y1epwOK14wRGvqt8BmYbW0FpWKY
 
+rocketmq:
+  producer:
+    isOnOff: on
+    groupName: frame
+    namesrvAddr: 127.0.0.1:9876
+    maxMessageSize: 4096
+    sendMsgTimeOut: 3000
+    retryTimesWhenSendFailed: 2
+
 server:
   port: 8888
 
